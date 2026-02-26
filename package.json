@@ -1,5 +1,5 @@
 {
-  "name": "@kaagent-player-performance-platform/shared-types",
+  "name": "kaagent-player-performance-platform-shared-types",
   "version": "0.0.1",
   "description": "Shared types for Kaagent Player Performance Platform",
   "repository": {
