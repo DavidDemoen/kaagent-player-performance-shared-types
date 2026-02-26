@@ -4,11 +4,7 @@
   "description": "Shared types for Kaagent Player Performance Platform",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DavidDemoen/kaagent-player-performance-shared-types.git",
-    "directory": "shared-types"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "url": "https://github.com/DavidDemoen/kaagent-player-performance-shared-types.git"
   },
   "main": "./dist/index.ts",
   "types": "./dist/index.d.ts",

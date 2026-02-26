@@ -1,0 +1,7 @@
+# Dependencies
+node_modules/
+
+# IDE
+.DS_Store
+*.swp
+*.swo
