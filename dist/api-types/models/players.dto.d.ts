@@ -4,6 +4,7 @@ export interface PlayerDto {
     opteamalId: string;
     firstName: string;
     lastName: string;
+    slug: string;
     birthDate: Date;
     gender: string;
     shirtNumber: number;
