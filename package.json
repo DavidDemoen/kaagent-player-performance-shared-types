@@ -1,0 +1,43 @@
+{
+  "name": "@kaagent-player-performance-platform/shared-types",
+  "version": "0.0.1",
+  "description": "Shared types for Kaagent Player Performance Platform",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidDemoen/kaagent-player-performance-shared-types.git",
+    "directory": "shared-types"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "main": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./api-types": {
+      "import": "./dist/api-types/index.js",
+      "types": "./dist/api-types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "shared-types",
+    "kaagent player performance platform",
+    "dto",
+    "typescript"
+  ],
+  "devDependencies": {
+    "typescript": "5.9.2"
+  }
+}
