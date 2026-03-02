@@ -22,19 +22,27 @@ export type PlayerEvaluationTemplateInsert = Omit<
   "id" | "createdAt" | "updatedAt"
 >;
 
-export interface PlayerEvaluationPeriod {
-  periodType: PlayerEvaluationType;
+export interface PlayerEvaluationPeriodDto {
+  id: string;
+  name: string;
+  season: number;
   startDate: Date;
   endDate: Date;
 }
+
+export type PlayerEvaluationPeriodSelect = PlayerEvaluationPeriodDto;
+export type PlayerEvaluationPeriodInsert = Omit<
+  PlayerEvaluationPeriodDto,
+  "id"
+>;
 
 export interface PlayerEvaluationDto {
   id: string;
   playerId: string;
   authorId: string;
   evaluationTemplateId: string;
-  evaluationData: Record<string, any>; // Flexible JSONB
-  evaluationPeriod: PlayerEvaluationPeriod;
+  evaluationData: Record<string, any>;
+  evaluationPeriodId: string;
   status: PlayerEvaluationStatus;
   createdAt: Date;
   updatedAt: Date;
