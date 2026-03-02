@@ -2,8 +2,9 @@ export type PlayerEvaluationType = "micro" | "meso" | "macro";
 export type PlayerEvaluationStatus = "draft" | "submitted" | "locked";
 export interface PlayerEvaluationTemplateDto {
     id: string;
+    name: string;
     type: PlayerEvaluationType;
-    version: number;
+    version: string;
     templateSchema: {
         criteriaKeys: string[];
         required: string[];
@@ -23,8 +24,7 @@ export interface PlayerEvaluationPeriod {
 export interface PlayerEvaluationDto {
     id: string;
     playerId: string;
-    coachIds: string[];
-    evaluationType: PlayerEvaluationType;
+    authorId: string;
     evaluationTemplateId: string;
     evaluationData: Record<string, any>;
     evaluationPeriod: PlayerEvaluationPeriod;

@@ -1,6 +1,6 @@
 {
   "name": "kaagent-player-performance-platform-shared-types",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Shared types for Kaagent Player Performance Platform",
   "repository": {
     "type": "git",
