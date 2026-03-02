@@ -20,4 +20,5 @@ __exportStar(require("./teams.dto"), exports);
 __exportStar(require("./auth.dto"), exports);
 __exportStar(require("./players-teams-hist.dto"), exports);
 __exportStar(require("./players-positions-hist.dto"), exports);
+__exportStar(require("./player-evaluations.dto"), exports);
 //# sourceMappingURL=index.js.map
