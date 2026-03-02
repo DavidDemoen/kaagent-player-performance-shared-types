@@ -1,6 +1,8 @@
+export type PlayerEvaluationType = "micro" | "meso" | "macro";
+export type PlayerEvaluationStatus = "draft" | "submitted" | "locked";
 export interface PlayerEvaluationTemplateDto {
     id: string;
-    type: "weekly" | "monthly" | "quarterly";
+    type: PlayerEvaluationType;
     version: number;
     templateSchema: {
         criteriaKeys: string[];
@@ -14,7 +16,7 @@ export interface PlayerEvaluationTemplateDto {
 export type PlayerEvaluationTemplateSelect = PlayerEvaluationTemplateDto;
 export type PlayerEvaluationTemplateInsert = Omit<PlayerEvaluationTemplateDto, "id" | "createdAt" | "updatedAt">;
 export interface PlayerEvaluationPeriod {
-    periodType: "micro" | "meso" | "macro";
+    periodType: PlayerEvaluationType;
     startDate: Date;
     endDate: Date;
 }
@@ -22,11 +24,11 @@ export interface PlayerEvaluationDto {
     id: string;
     playerId: string;
     coachIds: string[];
-    evaluationType: "weekly" | "monthly" | "quarterly";
+    evaluationType: PlayerEvaluationType;
     evaluationTemplateId: string;
     evaluationData: Record<string, any>;
     evaluationPeriod: PlayerEvaluationPeriod;
-    status: "draft" | "submitted" | "locked";
+    status: PlayerEvaluationStatus;
     createdAt: Date;
     updatedAt: Date;
     submittedAt?: Date;
@@ -57,7 +59,7 @@ export interface PlayerEvaluationTemplateListResponseDto extends PlayerEvaluatio
 export interface SubmitEvaluationResponseDto {
     success: boolean;
     evaluationId: string;
-    status: string;
+    status: PlayerEvaluationStatus;
     submittedAt: string;
 }
 /**
